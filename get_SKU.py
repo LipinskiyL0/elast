@@ -27,7 +27,7 @@ encoding = [
 flag=0
 for enc in encoding:
     try:
-        df1 = pd.read_csv("data.csv",delimiter=",", index_col=False ,
+        df1 = pd.read_csv("data.csv",delimiter=";", index_col=False ,
                  encoding=enc)
     except (UnicodeDecodeError, LookupError):
         pass
