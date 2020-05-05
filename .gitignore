@@ -133,3 +133,5 @@ dmypy.json
 *.xlsx
 *.txt
 *.png
+*.rar
+*.zip
