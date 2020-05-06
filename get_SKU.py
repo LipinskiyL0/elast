@@ -27,7 +27,7 @@ encoding = [
 flag=0
 for enc in encoding:
     try:
-        df1 = pd.read_csv("data.csv",delimiter=";", index_col=False ,
+        df1 = pd.read_csv("data.csv",delimiter="	", index_col=False ,
                  encoding=enc)
     except (UnicodeDecodeError, LookupError):
         pass
@@ -64,6 +64,6 @@ d.columns=["SKU", "Num"]
 d=pd.merge(d, ban, how='left')
 d["min_price"]=d["min_price"]*0.9
 d["max_price"]=d["max_price"]*1.2
-d.to_csv("SKU.csv", header=True,  sep=";")
+d.to_csv("SKU.csv", header=True,  sep="	")
 
 

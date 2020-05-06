@@ -26,7 +26,7 @@ from col_model import col_model
 
 import os.path
 import sys
-key=pd.read_csv("key_SKU.csv",delimiter=";")
+key=pd.read_csv("key_SKU.csv",delimiter="	")
 sku=list(key["SKU"])
 
 #df1 = pd.read_csv("data.csv",delimiter=";",
@@ -51,7 +51,7 @@ encoding = [
 flag=0
 for enc in encoding:
     try:
-        df1 = pd.read_csv("data.csv",delimiter=",",
+        df1 = pd.read_csv("data.csv",delimiter="	",
                  encoding=enc)
     except (UnicodeDecodeError, LookupError):
         pass
